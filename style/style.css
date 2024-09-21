@@ -1,0 +1,560 @@
+:root {
+ --cor-principal :#4B0082;
+ --cor-secundaria : white;
+ --cor-sessao: #000;
+ --cor-footer: rgba(6, 6, 212, 0.918);
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.top-info {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/*Menu*/
+.navbar {
+    background-color: #4B0082;
+    color: white;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+/*Fim do menu*/
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #4B0082;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #6A0DAD;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    width: 1280px;
+    height: 420px;
+}
+.carousel img {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.carousel img.active {
+    display: block;
+}
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+.service-item {
+    width: 30%;
+    box-sizing: border-box;
+    margin: 10px;
+    text-align: center;
+}
+.service-item img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.service-item h3 {
+    margin: 10px 0;
+    background-color: var(--cor-footer)
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+.about {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+.about-text {
+    max-width: 600px;
+    margin-right: 20px;
+}
+.about-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.about-text p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+.about-text button {
+    background-color: #4B0082;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+.about-text button:hover {
+    background-color: #6A0DAD;
+}
+.about-images img {
+    width: 100px;
+    height: auto;
+    margin: 5px;
+}
+.quote {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+.quote-text {
+    max-width: 600px;
+    margin-right: 20px;
+}
+.quote-text h2 {
+    font-size: 24px;
+    color: var(--cor-footer)
+    margin-bottom: 10px;
+}
+.quote-text p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+.quote-text button {
+    background-color: #d4af37;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+.quote-text button:hover {
+    background-color: #b89f32;
+}
+.quote-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+}
+.service-types {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+.service-types h2 {
+    font-size: 24px;
+    color: #d4af37;
+    margin-bottom: 20px;
+}
+.service-types p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+.service-types-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.service-type-item {
+    width: 20%;
+    box-sizing: border-box;
+    margin: 10px;
+    text-align: center;
+}
+.service-type-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.service-type-item h3 {
+    margin: 10px 0;
+    background-color: #d4af37;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+@media (max-width: 768px) {
+    .service-item, .service-type-item {
+        width: 45%;
+    }
+    .about,
+    .quote {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-text,
+    .quote-text {
+        margin-right: 0;
+    }
+}
+@media (max-width: 480px) {
+    .service-item, .service-type-item {
+        width: 100%;
+    }
+}
+
+/*Missao, visao e valores*/
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+.icon {
+    font-size: 40px;
+    color: #8B4513; /* Cor marrom */
+}
+
+.icon-card {
+    box-shadow: 10px 7px 20px rgb(102, 2, 168) ;
+}
+/*Footer e chatboot com contato*/
+
+/*chatbot*/
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 15px;
+    width: 90%;
+    max-width: 300px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+.card:hover {
+    transform: translateY(-10px);
+}
+.card img {
+    width: 100%;
+    height: auto;
+}
+.card .content {
+    padding: 15px;
+}
+.card .content h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+.card .content p {
+    font-size: 14px;
+    color: #666;
+}
+.card .content a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+.card .tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #00ffcc;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+.floating-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.floating-button {
+    background-color: #25D366;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.floating-button.chatbot {
+    background-color: #FF4500;
+}
+
+ /* Estilo do menu flutuante */
+ #chatbot-menu {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #6A0DAD;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    text-align: center;
+}
+#chatbot-menu button {
+    margin-top: 10px;
+    background-color: #fff;
+    color: #6A0DAD;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+#chatbot-menu button:hover {
+    background-color: #ddd;
+}
+
+
+h2 {
+    color: #4B0082; /* roxo */
+}
+
+.footer-text {
+    color: white; /* branco */
+    font-weight: bold;
+}
+
+footer {
+    background-color: #4B0082;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    
+}
+
+.bordered {
+    border: 2px solid #4B0082; /* laranja */
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 80px;
+    left: 20px;
+    background-color: #770af5d8; /* azul */
+    color: white;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 24px;
+    display: none; /* Inicialmente escondido */
+    z-index: 1000;
+}
+
+.nova-secao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+
+h1, h3, h4, h5 {
+    color: darkviolet;
+    font-weight: bold;
+}
+
+
+
+/*Reponsividade*/
+
+/* Responsividade */
+
+/* Estilos para relógios e dispositivos muito pequenos (até 280px) */
+@media (max-width: 280px) {
+    .navbar {
+        flex-direction: column;
+        padding: 5px;
+    }
+    .navbar a {
+        padding: 5px;
+        font-size: 10px;
+    }
+    .service-item, .service-type-item {
+        width: 100%;
+    }
+    .about, .quote {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-text, .quote-text {
+        font-size: 12px;
+    }
+}
+
+/* Smartphones pequenos (até 360px, como iPhone SE e alguns Androids) */
+@media (max-width: 360px) {
+    .navbar {
+        flex-direction: column;
+        padding: 8px;
+    }
+    .navbar a {
+        padding: 8px;
+        font-size: 12px;
+    }
+    .service-item, .service-type-item {
+        width: 100%;
+    }
+    .about, .quote {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-text, .quote-text {
+        font-size: 14px;
+    }
+}
+
+/* Smartphones e iPhones padrão (até 576px, iPhones maiores, Galaxy S, etc.) */
+@media (max-width: 576px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .navbar a {
+        padding: 10px;
+        font-size: 14px;
+    }
+    .service-item, .service-type-item {
+        width: 100%;
+    }
+    .about, .quote {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-text, .quote-text {
+        font-size: 16px;
+    }
+}
+
+/* Tablets (até 768px, iPads, Samsung Tabs, etc.) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .navbar a {
+        padding: 10px;
+        font-size: 16px;
+    }
+    .service-item, .service-type-item {
+        width: 45%;
+    }
+    .about, .quote {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-text, .quote-text {
+        font-size: 18px;
+    }
+}
+
+/* Tablets grandes e pequenos notebooks (até 992px) */
+@media (max-width: 992px) {
+    .service-item, .service-type-item {
+        width: 42%;
+    }
+    .about, .quote {
+        flex-direction: row;
+        text-align: left;
+    }
+    .about-text, .quote-text {
+        font-size: 18px;
+    }
+}
+
+/* Laptops e computadores (até 1200px) */
+@media (max-width: 1200px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .service-item, .service-type-item {
+        width: 30%;
+    }
+    .about, .quote {
+        flex-direction: row;
+        text-align: left;
+    }
+    .about-text, .quote-text {
+        font-size: 20px;
+    }
+}
