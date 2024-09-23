@@ -420,6 +420,32 @@ body {
 }
 
 
+/*Pagementos*/
+.payment-section {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    max-width: 800px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.payment-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--cor-principal) /* Azul escuro */
+    margin-bottom: 20px;
+}
+
+.payment-logos img {
+    margin: 0 10px;
+    max-width: 60px; /* Ajuste o tamanho das imagens conforme necessário */
+    vertical-align: middle;
+}
+
+
 /*footer*/
 
 .footer-text {
