@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="icon" href="https://via.placeholder.com/60" type="image/png">
     <title>Vidraçaria Assunção</title>
 </head>
 <body>
@@ -12,11 +13,14 @@
         Rua Campo Belo - Minas Gerais Lavrinhas 992 - Email: levi@vidracaria.com
     </div>
 
+    <!-- Botão para abrir o menu lateral no mobile -->
     <div class="navbar">
-        <a class="navbar-brand" href="./index.html"></a>
+        <a class="navbar-brand" href="./index.html">
             <img src="https://via.placeholder.com/60" alt="Logo" style="height: 65px;">
         </a>
-        <a class="icon-card" href="#inicio">Início</a>
+        <!-- Ícone de menu para dispositivos móveis -->
+        <span class="menu-icon" onclick="openNav()">&#9776;</span>
+        <a href="./index.html">Início</a>
         <div class="dropdown">
             <a href="#servicos">Serviços</a>
             <div class="dropdown-content">
@@ -35,6 +39,29 @@
         <a href="#redes-sociais">Redes Sociais</a>
         <a href="#clientes">Clientes</a>
     </div><br><br>
+
+    <!-- Menu lateral que será aberto ao clicar no ícone -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#inicio">Início</a>
+        <div class="dropdown">
+            <a href="#servicos">Serviços</a>
+            <div class="dropdown-content">
+                <a href="#box">Box</a>
+                <a href="#sacada">Filme</a>
+                <a href="#portas">Espelho</a>
+                <a href="#portas">Corrimão</a>
+                <a href="#corrimao">Portas</a>
+                <a href="#espelhos">Janelas</a>
+                <a href="#portas">Sacada</a>
+                <a href="#corrimao">Projetos</a>
+                <a href="#persianas">Guarda-corpo</a>
+            </div>
+        </div>
+        <a href="#contatos">Contatos</a>
+        <a href="#redes-sociais">Redes Sociais</a>
+        <a href="#clientes">Clientes</a>
+    </div>
 
     <div class="carousel icon-card">
         <img src="https://via.placeholder.com/1280x420" alt="Imagem 1" class="active">
@@ -105,7 +132,7 @@
             <p>Somos referência no mercado nacional em Box, Box com Roldanas, Guarda Corpo, Portas de Correr de Vidro, Espelhos, Envidraçamento de Sacadas e Fechamento de Ambientes Corporativos!</p>
             <p>Fale agora mesmo, nossos vendedores estão aguardando seu contato!</p>
             <p><strong>Fale conosco pelo WhatsApp</strong></p>
-            <button>Orçamento</button>
+            <a href="https://api.whatsapp.com/send/?phone=5535991328331&text&type=phone_number&app_absent=0" target="_blank"><button>Orçamento</button></a>
         </div>
         <div class="quote-image ">
             <img src="https://via.placeholder.com/60" alt="Imagem Orçamento">
@@ -140,19 +167,19 @@
     
     <!--botoes flutuantes-->
     <div class="floating-buttons">
-        <button class="floating-button whatsapp" onclick="window.open('https://wa.me/SEU_NUMERO', '_blank')">W</button>
+        <button class="floating-button whatsapp" onclick="window.open('https://wa.me/5535991328331', 'target_blank')">W</button>
         <button class="floating-button chatbot" onclick="showChatbotMenu()">🤖</button>
     </div>
 
     <!-- Menu flutuante personalizado -->
     <div id="chatbot-menu">
         <h3 style="color: azure;">Escolha uma opção</h3>
-        <button onclick="navigateTo('./cursos/html.html')">Estudar HTML</button>
-        <button onclick="navigateTo('./cursos/css.html')">Estudar CSS</button>
-        <button onclick="navigateTo('./cursos/javascript.html')">Estudar JavaScript</button>
-        <button onclick="navigateTo('./aulas.html')">Aulas</button>
-        <button onclick="navigateTo('./ebooks/ebook.html')">Ebooks</button>
-        <button onclick="navigateTo('./tutoriais/tutoriais.html')">Tutoriais</button>
+        <button onclick="navigateTo('./paginas/box.html)">BOX</button>
+        <button onclick="navigateTo('./paginas/sacada.html.html')">SACADA</button>
+        <button onclick="navigateTo('./paginas/espelho.html.html')">ESPELHO</button>
+        <button onclick="navigateTo('./paginas/janelas.html.html')">JANELA</button>
+        <button onclick="navigateTo('./paginas/projetos.html.html')">PROJETO</button>
+        <button onclick="navigateTo('https://api.whatsapp.com/send/?phone=5535991328331&text&type=phone_number&app_absent=0')">ORÇAMENTO</button>
         <button onclick="closeChatbotMenu()">Fechar</button>
     </div>
 
@@ -169,6 +196,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="./script/script.js"></script>
-    <script src="./script/digitando.js"></script>
+    <script src="./script/menu.js"></script>
 </body>
 </html>
