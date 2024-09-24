@@ -253,28 +253,49 @@ body {
     border-radius: 5px;
 }
 
+/* Responsividade para telas menores que 768px */
 @media (max-width: 768px) {
-    .service-item, .service-type-item {
-        width: 45%;
+    .service-item, 
+    .service-type-item {
+        width: 48%; /* Ajuste para manter mais espaçamento e evitar quebra desnecessária */
+        margin-bottom: 20px; /* Adiciona espaço entre os itens para uma melhor organização */
     }
     
     .about,
     .quote {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: column; /* Os itens serão empilhados verticalmente */
+        align-items: center; /* Centraliza os itens */
+        text-align: center; /* Centraliza o texto para uma aparência mais organizada */
+        padding: 10px 20px; /* Adiciona um espaçamento interno para evitar que os itens toquem as bordas */
     }
     
     .about-text,
     .quote-text {
-        margin-right: 0;
+        margin-right: 0; /* Remove qualquer margem lateral */
+        margin-bottom: 15px; /* Adiciona espaçamento entre o texto e outros elementos */
+        width: 100%; /* Garante que o texto ocupe toda a largura disponível */
     }
 }
 
+/* Responsividade para telas menores que 480px */
 @media (max-width: 480px) {
-    .service-item, .service-type-item {
-        width: 100%;
+    .service-item, 
+    .service-type-item {
+        width: 100%; /* Ocupa a largura total em dispositivos muito pequenos */
+        margin-bottom: 15px; /* Reduz o espaçamento entre os itens */
+    }
+    
+    .about,
+    .quote {
+        padding: 8px 15px; /* Ajusta o padding para telas menores */
+    }
+    
+    .about-text,
+    .quote-text {
+        font-size: 16px; /* Ajusta o tamanho da fonte para melhor legibilidade */
     }
 }
+
 
 /* Missão, visão e valores */
 .container {
@@ -511,15 +532,33 @@ footer {
 /* Responsividade para o mobile */
 @media (max-width: 768px) {
     .menu-icon {
-        display: block;
+        display: block; /* Exibe o ícone do menu */
+        cursor: pointer; /* Mostra que o ícone é clicável */
     }
 
     .navbar a {
-        display: none; /* Esconde os links na barra superior */
+        display: none; /* Esconde os links na barra de navegação */
     }
 
     .navbar img {
         display: inline-block; /* Mantém o logo visível */
+        max-width: 80%; /* Garante que o logo se ajuste bem na tela menor */
+        height: auto; /* Mantém a proporção do logo */
+    }
+
+    /* Quando o menu for ativo, os links aparecerão */
+    .navbar.active a {
+        display: block; /* Mostra os links da barra de navegação */
+        width: 100%; /* Garante que os links ocupem toda a largura do menu */
+        text-align: center; /* Centraliza os links para melhor aparência */
+        padding: 10px 0; /* Adiciona espaçamento nos links */
+    }
+}
+
+/* Alternativa para ajustar a largura do logo em telas menores */
+@media (max-width: 480px) {
+    .navbar img {
+        max-width: 70%; /* Diminui ainda mais o logo em telas menores */
     }
 }
 
