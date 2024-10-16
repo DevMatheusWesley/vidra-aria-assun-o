@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.css">
-    <link rel="icon" href="https://via.placeholder.com/60" type="image/png">
+    <link rel="icon" href="./assets/logos/logo-bg.jpg" type="image/png">
     <title>Vidraçaria Assunção</title>
 </head>
 <body>
@@ -16,7 +16,7 @@
     <!-- Botão para abrir o menu lateral no mobile -->
     <div class="navbar">
         <a class="navbar-brand" href="./index.html">
-            <img src="https://via.placeholder.com/60" alt="Logo" style="height: 65px;">
+            <img src="./assets/logos/logo-bg.jpg" alt="Logo" class="logo">
         </a>
         <!-- Ícone de menu para dispositivos móveis -->
         <span class="menu-icon" onclick="openNav()">&#9776;</span>
@@ -29,16 +29,15 @@
                 <a href="./paginas/espelho.html">Espelho</a>
                 <a href="./paginas/corrimao.html">Corrimão</a>
                 <a href="./paginas/portas.html">Portas</a>
-                <a href="./paginas/espelho.html">Janelas</a>
+                <a href="./paginas/janelas.html">Janelas</a>
                 <a href="./paginas/sacada.html">Sacada</a>
                 <a href="./paginas/projetos.html">Projetos</a>
                 <a href="./paginas/guarda_corpo.html">Guarda-corpo</a>
             </div>
         </div>
-        
         <a href="./redes-sociais.html">Redes Sociais</a>
         <a href="./clientes.html">Clientes</a>
-    </div><br><br>
+    </div>
 
     <!-- Menu lateral que será aberto ao clicar no ícone -->
     <div id="mySidenav" class="sidenav">
@@ -51,46 +50,56 @@
                 <a href="./paginas/sacada.html">Filme</a>
                 <a href="./paginas/espelho.html">Espelho</a>
                 <a href="./paginas/corrimao.html">Corrimão</a>
-                <a href="../paginas/portas.html">Portas</a>
-                <a href="./paginas/espelho.html">Janelas</a>
+                <a href="./paginas/portas.html">Portas</a>
+                <a href="./paginas/janelas.html">Janelas</a>
                 <a href="./paginas/sacada.html">Sacada</a>
                 <a href="./paginas/projetos.html">Projetos</a>
                 <a href="./paginas/guarda_corpo.html">Guarda-corpo</a>
             </div>
         </div>
-        
         <a href="./redes-sociais.html">Redes Sociais</a>
         <a href="./clientes.html">Clientes</a>
     </div>
 
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
 
     <!--Inicio carrosel-->
     <div class="carousel icon-card">
-        <img src="https://via.placeholder.com/1280x420" alt="Imagem 1" class="active">
-        <img src="https://via.placeholder.com/1280x420" alt="Imagem 2">
-        <img src="https://via.placeholder.com/1280x420" alt="Imagem 3">
+        <a href="https://api.whatsapp.com/send?1=pt_BR&phone=553591328331"><img src="./assets/banners/banner-1.png" alt="Imagem 1" class="active"></a>
+        <a href="https://api.whatsapp.com/send?1=pt_BR&phone=553591328331"><img src="./assets/banners/banner-2.png" alt="Imagem 2"></a>
+        <a href="https://api.whatsapp.com/send?1=pt_BR&phone=553591328331"><img src="./assets/banners/banner-3.png" alt="Imagem 3"></a>
     </div><br><br><br>
 
     <div class="about" id="sobre-nos">
         <div class="about-text">
             <h2>Sobre Nós</h2>
             <p>A Vidraçaria foi fundada por Levi Assunção há mais de 18 anos. Com mais de 3000 projetos entregues e desenvolvidos, atuamos em São Paulo, Minas e Brasília. Nossa experiência como vidraceiros profissionais nos permite oferecer soluções de alta qualidade e inovação aos nossos clientes.</p>
-            <button>Fale Conosco</button>
+            <a href="https://api.whatsapp.com/send?1=pt_BR&phone=553591328331" target="_blank"><button>Fale Conosco</button></a>
         </div>
-        <div class="about-images">
-            <img  src="https://via.placeholder.com/60" alt="Imagem 1">
-            <img src="https://via.placeholder.com/60" alt="Imagem 2">
-            <img src="https://via.placeholder.com/60" alt="Imagem 3">
+        <div class="12about-images">
+            <img src="./assets/icons/icone-1.png" alt="Imagem 1">
+            <img src="./assets/icons/icone-2.png" alt="Imagem 2">
+            <img src="./assets/icons/icone-3.png" alt="Imagem 3">
         </div>
     </div>
     <br>
+
+    
 
     <div class="service-types" id="tipos-de-servicos">
         <h2>Nossos Serviços</h2>
         <p>Conheça um pouco do nosso trabalho</p>
         <div class="service-types-items">
             <div class="service-type-item card ">
-                <img src="https://via.placeholder.com/80" alt="Box para Banheiro">
+                <img src="./assets/img/box-banheiro.png" alt="Box para Banheiro">
                 <h3>Box para Banheiro</h3>
             </div>
             <div class="service-type-item card">
@@ -137,7 +146,7 @@
             <a href="https://api.whatsapp.com/send/?phone=5535991328331&text&type=phone_number&app_absent=0" target="_blank"><button>Orçamento</button></a>
         </div>
         <div class="quote-image ">
-            <img src="https://via.placeholder.com/60" alt="Imagem Orçamento">
+            <img src="./assets/logos/logo-bg.jpg" alt="Imagem Orçamento">
         </div>
     </div><br>
 
@@ -181,7 +190,7 @@
     
     <!--botoes flutuantes-->
 <div class="floating-buttons">
-    <button class="floating-button whatsapp" onclick="window.open('https://wa.me/5535991328331', 'target_blank')">📱</button>
+    <button class="floating-button whatsapp" onclick="window.open('https://api.whatsapp.com/send?1=pt_BR&phone=553591328331', 'target_blank')">📱</button>
     <button class="floating-button chatbot" onclick="showChatbotMenu()">🤖</button>
 </div>
 

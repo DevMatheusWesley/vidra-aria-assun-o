@@ -16,7 +16,7 @@
     <!-- Botão para abrir o menu lateral no mobile -->
     <div class="navbar">
         <a class="navbar-brand" href="../index.html">
-            <img src="https://via.placeholder.com/60" alt="Logo" style="height: 65px;">
+            <img src="https://via.placeholder.com/60" alt="Logo" class="logo">
         </a>
         <!-- Ícone de menu para dispositivos móveis -->
         <span class="menu-icon" onclick="openNav()">&#9776;</span>
@@ -29,16 +29,15 @@
                 <a href="../paginas/espelho.html">Espelho</a>
                 <a href="../paginas/corrimao.html">Corrimão</a>
                 <a href="../paginas/portas.html">Portas</a>
-                <a href="../paginas/espelho.html">Janelas</a>
+                <a href="../paginas/janelas.html">Janelas</a>
                 <a href="../paginas/sacada.html">Sacada</a>
                 <a href="../paginas/projetos.html">Projetos</a>
                 <a href="../paginas/guarda_corpo.html">Guarda-corpo</a>
             </div>
         </div>
-        <a href="../contato.html">Contatos</a>
         <a href="../redes-sociais.html">Redes Sociais</a>
         <a href="../clientes.html">Clientes</a>
-    </div><br><br>
+    </div>
 
     <!-- Menu lateral que será aberto ao clicar no ícone -->
     <div id="mySidenav" class="sidenav">
@@ -52,16 +51,25 @@
                 <a href="../paginas/espelho.html">Espelho</a>
                 <a href="../paginas/corrimao.html">Corrimão</a>
                 <a href="../paginas/portas.html">Portas</a>
-                <a href="../paginas/espelho.html">Janelas</a>
+                <a href="../paginas/janelas.html">Janelas</a>
                 <a href="../paginas/sacada.html">Sacada</a>
                 <a href="../paginas/projetos.html">Projetos</a>
                 <a href="../paginas/guarda_corpo.html">Guarda-corpo</a>
             </div>
         </div>
-        <a href="../contato.html">Contatos</a>
         <a href="../redes-sociais.html">Redes Sociais</a>
         <a href="../clientes.html">Clientes</a>
     </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
 
 <div class="container">
     <h1 class="payment-section">Fechamento de Sacada</h1>

@@ -1,9 +1,13 @@
+:root {
+    --cor-principal: #4B0082;
+    --cor-secundaria: white;
+    --cor-sessao: #000;
+    --cor-footer: rgba(6, 6, 212, 0.918);
+}
+
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    padding: 10px;
-    line-height: 1.6;
 }
 
 .container {
@@ -50,45 +54,80 @@ ul {
     font-size: 14px;
 }
 
-/* Menu */
+/* Estilos do menu */
 .navbar {
-    background-color: #4B0082;
+    background-color: rgba(75, 0, 130, 0.9); /* Fundo com leve transparência */
     color: white;
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    padding: 5px 10px; /* Espaçamento reduzido */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Sombra branca leve */
+    transition: background-color 0.3s ease;
 }
 
 .navbar a {
     color: white;
     text-decoration: none;
-    padding: 10px;
+    padding: 5px 8px; /* Diminuído em 50% */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 16px;
+    font-weight: bold; /* Adicionando negrito */
+    margin: 0 70px; /* Diminuído em 50% */
 }
 
-dropdown {
+
+.navbar a:hover {
+    background-color: #6A0DAD;
+    border-radius: 3px;
+}
+
+.logo {
+    height: 45px; /* Tamanho menor */
+    width: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Dropdown styles */
+.dropdown {
     position: relative;
-    display: inline-block;
+    margin: 0 10px;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #4B0082;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    background-color: rgba(75, 0, 130, 0.95); /* Fundo com leve transparência */
+    border: 1px solid white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
     z-index: 1;
+    min-width: 180px;
+    overflow: hidden;
 }
 
 .dropdown-content a {
     color: white;
-    padding: 12px 16px;
+    padding: 10px 15px;
     text-decoration: none;
     display: block;
+    font-size: 14px; /* Reduzido para caber melhor */
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .dropdown-content a:hover {
@@ -97,33 +136,33 @@ dropdown {
 
 .dropdown:hover .dropdown-content {
     display: block;
+    animation: fadeIn 0.3s ease-in-out;
 }
-/* Fim do menu */
 
-/*Menu mobile*/
-/*Menu mobile*/
-
-/* Estilos para o menu lateral */
+/* Menu lateral (mobile) */
 .sidenav {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1000;
     top: 0;
     left: 0;
-    background-color: #4B0082;
+    background-color: rgba(75, 0, 130, 0.9);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
 }
 
 .sidenav a {
-    padding: 8px 8px 8px 32px;
+    padding: 8px 15px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 18px;
     color: white;
     display: block;
     transition: 0.3s;
+}
+
+.sidenav a:not(:last-child) {
+    border-bottom: 1px solid #fff;
 }
 
 .sidenav a:hover {
@@ -133,62 +172,43 @@ dropdown {
 .sidenav .closebtn {
     position: absolute;
     top: 0;
-    right: 25px;
+    right: 20px;
     font-size: 36px;
     margin-left: 50px;
 }
 
-/* Ícone de menu no mobile */
-.menu-icon {
-    font-size: 30px;
-    cursor: pointer;
-    color: white;
-    padding: 10px;
-    display: none;
+/* Animação fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Responsividade para o mobile */
-@media (max-width: 768px) {
+/* Menu suspenso e responsivo */
+@media screen and (max-width: 768px) {
     .menu-icon {
         display: block;
     }
 
     .navbar a {
-        display: none; /* Esconde os links na barra superior */
+        display: none;
     }
 
-    .navbar img {
-        display: inline-block; /* Mantém o logo visível */
+    .dropdown {
+        display: none;
     }
-}
-/*fim do menu mobile*/
 
-/*whatsapp*/
-/* Botões Flutuantes */
-.whatsapp-button,
-.scroll-to-top {
-    position: fixed;
-    color: var(--white-color);
-    border-radius: 50%;
-    padding: 15px;
-    font-size: 24px;
-    z-index: 1000;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
+    .navbar .logo {
+        display: block;
+    }
+}/
 
-
-.scroll-to-top {
-    background-color: #007BFF;
-    bottom: 80px;
-    left: 20px;
-    display: none; /* Escondido inicialmente */
-}
-
-.scroll-to-top:hover {
-    background-color: #0056b3;
-    transform: translateY(-5px);
-}
+/* Footer e chatbot com contato */
 
 /*chatbot*/
 
@@ -270,19 +290,6 @@ dropdown {
     background-color: #FF4500;
 }
 
-/*Setinha*/
-.scroll-to-top {
-    background-color: #007BFF;
-    bottom: 80px;
-    left: 20px;
-    display: none; /* Escondido inicialmente */
-}
-
-.scroll-to-top:hover {
-    background-color: #0056b3;
-    transform: translateY(-5px);
-}
-
  /* Estilo do menu flutuante */
  #chatbot-menu {
     display: none;
@@ -310,6 +317,20 @@ dropdown {
 }
 #chatbot-menu button:hover {
     background-color: #ddd;
+}
+
+/*Stinha top scroll*/
+.scroll-to-top {
+    position: fixed;
+    bottom: 80px;
+    left: 20px;
+    background-color: #770af5d8; /* azul */
+    color: white;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 24px;
+    display: none; /* Inicialmente escondido */
+    z-index: 1000;
 }
 
 

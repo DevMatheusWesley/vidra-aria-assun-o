@@ -1,8 +1,8 @@
 :root {
-    --cor-principal: #4B0082;
+    --cor-principal: #2f1a7e;
     --cor-secundaria: white;
     --cor-sessao: #000;
-    --cor-footer: rgba(6, 6, 212, 0.918);
+    --cor-footer: rgba(73, 32, 185, 0.918);
 }
 
 body {
@@ -10,63 +10,171 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* Estilo do topo de informações */
 .top-info {
-    background-color: #000;
+    background-color: #f2f2f2; /* Cor de fundo */
     color: #fff;
     text-align: center;
     padding: 10px;
     font-size: 14px;
+    margin-bottom: 60px; /* Espaçamento para o menu não cobrir */
 }
 
-/* Menu */
+/* Estilos do menu */
 .navbar {
-    background-color: #4B0082;
+    background-color: rgba(48, 28, 141, 0.9); /* Fundo com leve transparência */
     color: white;
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    padding: 5px 10px; /* Espaçamento reduzido */
+    box-shadow: 0 4px 10px rgba(29, 28, 85, 0.2); /* Sombra branca leve */
+    transition: background-color 0.3s ease;
 }
 
 .navbar a {
     color: white;
     text-decoration: none;
-    padding: 10px;
+    padding: 5px 8px; /* Diminuído em 50% */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 16px;
+    font-weight: bold; /* Adicionando negrito */
+    margin: 0 70px; /* Diminuído em 50% */
 }
 
-/* Fim do menu */
+
+.navbar a:hover {
+    background-color: #35339b;
+    border-radius: 3px;
+}
+
+.logo {
+    height: 45px; /* Tamanho menor */
+    width: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Dropdown styles */
 .dropdown {
     position: relative;
-    display: inline-block;
+    margin: 0 10px;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #4B0082;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    background-color: rgba(52, 31, 150, 0.95); /* Fundo com leve transparência */
+    border: 1px solid white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
     z-index: 1;
+    min-width: 180px;
+    overflow: hidden;
 }
 
 .dropdown-content a {
     color: white;
-    padding: 12px 16px;
+    padding: 10px 15px;
     text-decoration: none;
     display: block;
+    font-size: 14px; /* Reduzido para caber melhor */
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .dropdown-content a:hover {
-    background-color: #6A0DAD;
+    background-color: #35339b;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
+    animation: fadeIn 0.3s ease-in-out;
 }
+
+/* Menu lateral (mobile) */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #35339b;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:not(:last-child) {
+    border-bottom: 1px solid #fff;
+}
+
+.sidenav a:hover {
+    background-color: #35339b;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Animação fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Menu suspenso e responsivo */
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar a {
+        display: none;
+    }
+
+    .dropdown {
+        display: none;
+    }
+
+    .navbar .logo {
+        display: block;
+    }
+}
+
+
 
 .carousel {
     position: relative;
@@ -142,7 +250,7 @@ body {
 }
 
 .about-text button {
-    background-color: #4B0082;
+    background-color: #35339b;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -153,7 +261,7 @@ body {
 }
 
 .about-text button:hover {
-    background-color: #6A0DAD;
+    background-color: #35339b;
 }
 
 .about-images img {
@@ -189,7 +297,7 @@ body {
 }
 
 .quote-text button {
-    background-color: #d4af37;
+    background-color: #ffffff;
     color: black;
     border: none;
     padding: 10px 20px;
@@ -200,7 +308,7 @@ body {
 }
 
 .quote-text button:hover {
-    background-color: #b89f32;
+    background-color: #2d4181cc;
 }
 
 .quote-image img {
@@ -217,7 +325,7 @@ body {
 
 .service-types h2 {
     font-size: 24px;
-    color: #d4af37;
+    color: #2b2c5e;
     margin-bottom: 20px;
 }
 
@@ -247,7 +355,7 @@ body {
 
 .service-type-item h3 {
     margin: 10px 0;
-    background-color: #d4af37;
+    background-color: #494bceda;
     color: black;
     padding: 10px;
     border-radius: 5px;
@@ -322,11 +430,11 @@ body {
 
 .icon {
     font-size: 40px;
-    color: #8B4513; /* Cor marrom */
+    color: #3f28a3; /* Cor marrom */
 }
 
 .icon-card {
-    box-shadow: 10px 7px 20px rgb(102, 2, 168);
+    box-shadow: 10px 7px 20px rgb(47, 41, 133);
 }
 
 /* Footer e chatbot com contato */
@@ -342,7 +450,7 @@ body {
 .card {
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(27, 30, 58, 0.2);
     margin: 15px;
     width: 90%;
     max-width: 300px;
@@ -379,7 +487,7 @@ body {
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: #00ffcc;
+    background-color: #001aff;
     color: #fff;
     padding: 5px 10px;
     font-size: 12px;
@@ -394,7 +502,7 @@ body {
     gap: 10px;
 }
 .floating-button {
-    background-color: #25D366;
+    background-color: #2531d3;
     color: white;
     border: none;
     border-radius: 50%;
@@ -405,7 +513,7 @@ body {
     align-items: center;
     font-size: 24px;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(14, 16, 32, 0.2);
 }
 .floating-button.chatbot {
     background-color: #FF4500;
@@ -418,18 +526,18 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #6A0DAD;
+    background-color: #3c2eb8;
     color: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(20, 22, 49, 0.3);
     z-index: 1000;
     text-align: center;
 }
 #chatbot-menu button {
     margin-top: 10px;
     background-color: #fff;
-    color: #6A0DAD;
+    color: #312c81;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -440,13 +548,26 @@ body {
     background-color: #ddd;
 }
 
+/*Stinha top scroll*/
+.scroll-to-top {
+    position: fixed;
+    bottom: 80px;
+    left: 20px;
+    background-color: #332486d8; /* azul */
+    color: white;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 24px;
+    display: none; /* Inicialmente escondido */
+    z-index: 1000;
+}
 
 /*Pagementos*/
 .payment-section {
     background-color: #fff;
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(20, 21, 56, 0.1);
     margin: auto;
     max-width: 800px;
     text-align: center;
@@ -475,7 +596,7 @@ body {
 }
 
 footer {
-    background-color: #4B0082;
+    background-color: #3e48aa;
     color: white;
     padding: 10px 0;
     text-align: center;
@@ -493,7 +614,7 @@ footer {
     z-index: 1000;
     top: 0;
     left: 0;
-    background-color: #4B0082;
+    background-color: #37359c;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -509,7 +630,7 @@ footer {
 }
 
 .sidenav a:hover {
-    background-color: #6A0DAD;
+    background-color: #1d0dad;
 }
 
 .sidenav .closebtn {
