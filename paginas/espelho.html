@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/servicos.css">
-    <link rel="icon" href="https://via.placeholder.com/60" type="image/png">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="icon" href="../assets/logos/logo-bg.jpg" type="image/png">
     <title>Vidraçaria Assunção</title>
 </head>
 <body>
@@ -16,7 +16,7 @@
     <!-- Botão para abrir o menu lateral no mobile -->
     <div class="navbar">
         <a class="navbar-brand" href="../index.html">
-            <img src="https://via.placeholder.com/60" alt="Logo" class="logo">
+            <img src="../assets/logos/logo-bg.jpg" alt="Logo" class="logo">
         </a>
         <!-- Ícone de menu para dispositivos móveis -->
         <span class="menu-icon" onclick="openNav()">&#9776;</span>
@@ -25,7 +25,7 @@
             <a href="#servicos">Serviços</a>
             <div class="dropdown-content">
                 <a href="../paginas/box.html">Box</a>
-                <a href="../paginas/sacada.html">Filme</a>
+                <a href="../paginas/filme.html">Filme</a>
                 <a href="../paginas/espelho.html">Espelho</a>
                 <a href="../paginas/corrimao.html">Corrimão</a>
                 <a href="../paginas/portas.html">Portas</a>
@@ -59,7 +59,7 @@
         </div>
         <a href="../redes-sociais.html">Redes Sociais</a>
         <a href="../clientes.html">Clientes</a>
-    </div>
+    </div><br><br><br><br>
 
     <script>
         function openNav() {
@@ -71,50 +71,141 @@
         }
     </script>
 
-<div class="container">
-    <h1 class="payment-section">Fechamento de Sacada</h1>
-    <h2>Serviço de Envidraçamento de Espaços com vidro</h2>
-    <p>Está querendo fazer o fechamento de sacada ou varanda? Você está no lugar certo, pois a vidraçaria Hipólito é especialista nesse tipo de serviço, também chamado de envidraçamento de área. Nós temos Anos de Experiência, pois fazemos projeto com vidros e espelhos, deixando o espaço mais bonito e aconchegante.</p>
-
-    <h2>O que é Fechamento de Sacada?</h2>
-    <p>O fechamento de sacada ou fechamento de varanda ou envidraçamento consiste em envidraçar (instalar vidros) em um espaço que pode ser uma sacada, varanda, quintal ou qualquer área.</p>
-    <p>Fazemos a instalação de maneira Fixa ou Retrátil.</p>
-
-    <h2>Vantagens do Fechamento de Sacada com vidro</h2>
-    <ul>
-        <li>Protege seus móveis da ação degradante do sol e da chuva.</li>
-        <li>Diminui os ruídos externos.</li>
-        <li>Diminuição de sujeira (poeira vindas da rua).</li>
-    </ul>
-
-    <div class="image-container">
-        <img src="https://via.placeholder.com/400" alt="Fechamento de Sacada">
+     <!-- Início do carrossel -->
+     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <!-- Removemos os botões de indicadores e navegação -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../assets/banners/banner-1.png" class="d-block w-100" alt="Imagem 1">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/banners/banner-2.png" class="d-block w-100" alt="Imagem 2">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/banners/banner-3.png" class="d-block w-100" alt="Imagem 3">
+          </div>
+        </div>
+      </div><br>
+    <!-- Fim do carrossel -->
+<br>
+    <div class="container" >
+        <div class="card" style="background-color: rgb(83, 83, 177);">
+            <div class="icon">🛠️</div>
+            <h3 style="color: rgb(251, 251, 253);">Espelhos</h3>
+        </div>
+        
     </div>
 
-    <h2>O que é Fechamento de Sacada?</h2>
-    <p>O fechamento de sacada ou fechamento de varanda ou envidraçamento consiste em envidraçar (instalar vidros) em um espaço que pode ser uma sacada, varanda, quintal ou qualquer área.</p>
-    <p>Fazemos a instalação de maneira Fixa ou Retrátil.</p>
-
-    <h2>O que é Fechamento de Sacada?</h2>
-    <p>O fechamento de sacada ou fechamento de varanda ou envidraçamento consiste em envidraçar (instalar vidros) em um espaço que pode ser uma sacada, varanda, quintal ou qualquer área.</p>
-    <p>Fazemos a instalação de maneira Fixa ou Retrátil.</p>
-</div><br><br><br>
-
-<!--Pagamentos-->
-<div class="payment-section">
-    <div class="payment-title">Facilitamos o Pagamento</div><br>
-    <div class="payment-logos">
-        <img class="card" src="https://via.placeholder.com/60" alt="Visa">
-        <img class="card" src="https://via.placeholder.com/60" alt="Mastercard">
-        <img class="card" src="https://via.placeholder.com/60" alt="Elo">
-        <img class="card" src="https://via.placeholder.com/60" alt="Hipercard">
-        <img class="card" src="https://via.placeholder.com/60" alt="Pix">
+    <!-- imagem grande -->
+    <div class="quote" style="background-color: azure;" id="solicitar-orcamento">
+        <!-- <div class="quote-text">
+            <h2>Solicite seu Orçamento Agora!</h2>
+            <p>Na Vidraçaria Assunção, somos referência no mercado nacional em soluções de vidro, incluindo Box, Box com Roldanas, Guarda Corpo, Portas de Correr de Vidro, Espelhos, Envidraçamento de Sacadas e Fechamento de Ambientes Corporativos.</p>
+            <p>Fale agora mesmo com nossa equipe especializada. Estamos prontos para atender você com rapidez e precisão!</p>
+            <p><strong>Entre em contato pelo WhatsApp e garanta já seu orçamento gratuito!</strong></p>
+            <a href="https://api.whatsapp.com/send/?phone=5535991328331&text&type=phone_number&app_absent=0" target="_blank"><button>Peça seu Orçamento</button></a>
+        </div> -->
+        <div class="quote-image">
+            <img src="../assets/galeria/espelhos -600x600.png" alt="Vidraçaria Assunção">
+        </div>
     </div>
-</div>
+    <br>
+    <!-- fim imagem grande -->
 
-<!--botoes flutuantes-->
+    <div class="container">
+        <!-- Espelhos -->
+        <div class="card">
+            <div class="icon">🪞</div>
+            <h3>Espelhos</h3>
+            <p>Os <strong>espelhos</strong> são elementos indispensáveis em qualquer ambiente, oferecendo não apenas praticidade, mas também benefícios estéticos e funcionais. Em banheiros, eles são essenciais para o momento de cuidados pessoais, como fazer a barba, se maquiar ou se arrumar. No entanto, os <strong>espelhos</strong> também têm o poder de transformar a percepção de espaço, criando uma sensação de amplitude e luminosidade, especialmente em ambientes menores. Além disso, são ideais para dar um toque de sofisticação e modernidade à decoração, combinando com diversos estilos de design.</p>
+        </div>
+    
+        <!-- Espelho com LED -->
+        <div class="card">
+            <div class="icon">💡</div>
+            <h3>Espelho com LED</h3>
+            <p>O <strong>espelho</strong> com LED é a escolha perfeita para quem busca aliar funcionalidade à estética. Sua iluminação suave e uniforme é ideal para banheiros, proporcionando uma luz clara e sem sombras, o que facilita atividades como a maquiagem e o cuidado pessoal. Esse tipo de <strong>espelho</strong> também pode ser instalado em áreas como closets e provadores, criando uma iluminação ambiental que valoriza os detalhes. Os LEDs são altamente eficientes, garantindo economia de energia e longevidade, ao mesmo tempo em que proporcionam um efeito visual sofisticado e moderno.</p>
+        </div>
+    
+        <!-- Espelhos para Closet -->
+        <div class="card">
+            <div class="icon">👗</div>
+            <h3>Espelhos para Closet</h3>
+            <p><strong>Espelhos</strong> amplos e bem posicionados em closets fazem toda a diferença na organização e funcionalidade do espaço. Além de serem uma ferramenta prática para visualizar o look escolhido, eles ajudam a otimizar o uso do espaço. Em ambientes pequenos, como closets ou quartos, os <strong>espelhos</strong> têm o poder de criar uma sensação de profundidade, fazendo com que o ambiente pareça mais espaçoso e arejado. A instalação de <strong>espelhos</strong> em closets também facilita o processo de escolha de roupas, pois permite ver o conjunto completo de forma rápida e prática.</p>
+        </div>
+    
+        <!-- Espelhos para Provador -->
+        <div class="card">
+            <div class="icon">🛍️</div>
+            <h3>Espelhos para Provador</h3>
+            <p><strong>Espelhos</strong> grandes e bem iluminados em provadores são essenciais para criar uma experiência de compra mais agradável e confiável. Eles ampliam a percepção do espaço e permitem uma visualização detalhada da roupa no corpo, proporcionando mais segurança na escolha do produto. Além de ajudar a aumentar a confiança do consumidor, eles também têm o poder de transformar um simples provador em um ambiente mais moderno e confortável, o que pode impactar diretamente a decisão de compra.</p>
+        </div>
+    
+        <!-- Benefícios Gerais -->
+        <div class="card">
+            <div class="icon">✨</div>
+            <h3>Benefícios dos Espelhos</h3>
+            <p><strong>Espelhos</strong> ampliam visualmente o espaço, tornando ambientes pequenos mais amplos e iluminados. Em quartos e banheiros, são essenciais para a rotina diária, melhorando a iluminação e o bem-estar. Além disso, em closets e guarda-roupas, ajudam na organização e na escolha de roupas, tornando o ambiente mais funcional. O <strong>espelho</strong> com LED também é ideal para otimizar o consumo de energia, mantendo o ambiente iluminado e eficiente.</p>
+        </div>
+    </div>
+    
+
+    
+    
+
+    <div class="about" id="orçamento">
+        <div class="about-text">
+            <h2>Transforme seu ambiente com Espelhos de Qualidade</h2>
+            <p>Os espelhos são peças chave em qualquer ambiente, seja para ampliar o espaço, melhorar a iluminação ou criar um toque de sofisticação. Eles são ideais para banheiros, quartos, salas, closets e até provadores. Além da estética, os espelhos têm a capacidade de aumentar a luminosidade de espaços pequenos e de proporcionar uma sensação de profundidade e elegância.</p>
+    
+            <p>Na Vidraçaria Assunção, entendemos a importância de ter o espelho perfeito para seu projeto. Se você está planejando instalar espelhos em sua casa ou empresa, nós oferecemos serviços de instalação, troca e manutenção de alta qualidade. Trabalhamos com espelhos sob medida e personalizáveis, garantindo que se ajustem perfeitamente ao seu espaço e estilo.</p>
+    
+            <p><strong>Problemas com o seu espelho?</strong> Se você enfrenta qualquer problema com seus espelhos, seja com instalação, trincas ou necessidade de troca, a Vidraçaria Assunção está pronta para atender. Nós realizamos trocas e serviços de manutenção com eficiência e rapidez, assegurando a melhor solução para você.</p>
+    
+            <p>Não deixe para depois! <strong>Entre em contato conosco</strong> e solicite seu orçamento personalizado para espelhos de alta qualidade. Garantimos a entrega de um trabalho impecável e a satisfação do cliente.</p>
+    
+            
+        </div>
+        <div class="12about-images">
+            <img src="../assets/icons/icone-1.png" alt="Espelhos para Casa">
+            <img src="../assets/icons/icone-2.png" alt="Espelhos para Escritórios">
+            <img src="../assets/icons/icone-3.png" alt="Espelhos Personalizados">
+        </div>
+    </div>
+    
+    
+    
+    <div class="quote" id="solicitar-orcamento">
+        <div class="quote-text">
+            <h2>Solicite seu Orçamento Agora!</h2>
+            <p>Na Vidraçaria Assunção, somos referência no mercado nacional em soluções de vidro, incluindo Box, Box com Roldanas, Guarda Corpo, Portas de Correr de Vidro, Espelhos, Envidraçamento de Sacadas e Fechamento de Ambientes Corporativos.</p>
+            <p>Fale agora mesmo com nossa equipe especializada. Estamos prontos para atender você com rapidez e precisão!</p>
+            <p><strong>Entre em contato pelo WhatsApp e garanta já seu orçamento gratuito!</strong></p>
+            <a href="https://api.whatsapp.com/send/?phone=5535991328331&text&type=phone_number&app_absent=0" target="_blank"><button>Peça seu Orçamento</button></a><br>
+            <br>
+        </div>
+        <div class="quote-image">
+            <img src="../assets/logos/logo-bg.jpg" alt="Vidraçaria Assunção">
+        </div>
+    </div>
+    <br>
+    
+
+
+    <!--Pagamentos-->
+    <div class="payment-section">
+        <div class="payment-title">Facilitamos o Pagamento</div><br>
+        <div class="payment-logos">
+            <img class="card" src="../assets/icons/pix.png" alt="Pix">
+            <img class="card" src="../assets/icons/cartao.png" alt="Cartao">
+            <img class="card" src="../assets/icons/boleto.png" alt="Boleto">
+            <img class="card" src="../assets/icons/dinheiro.png" alt="Dinheiro">
+        </div>
+    </div>
+    
+    <!--botoes flutuantes-->
 <div class="floating-buttons">
-    <button class="floating-button whatsapp" onclick="window.open('https://wa.me/5535991328331', 'target_blank')">📱</button>
+    <button class="floating-button whatsapp" onclick="window.open('https://api.whatsapp.com/send?1=pt_BR&phone=553591328331', 'target_blank')">📱</button>
     <button class="floating-button chatbot" onclick="showChatbotMenu()">🤖</button>
 </div>
 
@@ -122,10 +213,10 @@
 <div id="chatbot-menu">
     <h3 style="color: azure;">Escolha uma opção</h3>
     <button onclick="navigateTo('../paginas/box.html)">BOX</button>
-    <button onclick="navigateTo('../paginas/sacada.html.html')">SACADA</button>
-    <button onclick="navigateTo('../paginas/espelho.html.html')">ESPELHO</button>
-    <button onclick="navigateTo('../paginas/janelas.html.html')">JANELA</button>
-    <button onclick="navigateTo('../paginas/projetos.html.html')">PROJETO</button>
+    <button onclick="navigateTo('../paginas/sacada.html')">SACADA</button>
+    <button onclick="navigateTo('../paginas/espelho.html')">ESPELHO</button>
+    <button onclick="navigateTo('../paginas/janelas.html')">JANELA</button>
+    <button onclick="navigateTo('../paginas/projetos.html')">PROJETO</button>
     <button onclick="navigateTo('https://api.whatsapp.com/send/?phone=5535991328331&text&type=phone_number&app_absent=0')">ORÇAMENTO</button>
     <button onclick="closeChatbotMenu()">Fechar</button>
 </div>
@@ -136,7 +227,7 @@
         Matheus Wesley</a> - &copy; Vidraçaria Assunção 2024</p>
 </footer>
 
-<a href="#" class="scroll-to-top" title="Ir para o topo">⬆️</a>
+<a href="#" class="scroll-to-top" title="Ir para o topo">↑</a>
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
