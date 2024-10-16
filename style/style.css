@@ -774,3 +774,45 @@ footer {
 }
 
 
+/* teste */
+@media screen and (max-width: 768px) {
+    /* Mostrar o ícone de menu */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Ocultar os links da navbar padrão e o dropdown no desktop */
+    .navbar a {
+        display: none;
+    }
+
+    /* Dropdown no menu lateral (mobile-only) */
+    .dropdown.mobile-only {
+        display: block;
+    }
+
+    /* Mostrar o conteúdo do dropdown quando clicado no mobile */
+    .dropdown.mobile-only .dropdown-content {
+        display: block; /* Mostra sempre no mobile */
+    }
+
+    /* Esconder o dropdown no desktop */
+    .dropdown.desktop-only {
+        display: none;
+    }
+
+    /* Ajustes do menu lateral */
+    .sidenav {
+        width: 100%; /* Altera a largura do menu lateral no mobile */
+    }
+
+    .sidenav a {
+        font-size: 20px;
+    }
+
+    .sidenav .dropdown-content {
+        display: block; /* Sempre exibe no sidenav */
+    }
+}
+
+
