@@ -12,40 +12,39 @@ body {
 
 /* Estilo do topo de informações */
 .top-info {
-    background-color: #f2f2f2; /* Cor de fundo */
+    background-color: #070707;
     color: #fff;
     text-align: center;
     padding: 10px;
     font-size: 14px;
-    margin-bottom: 60px; /* Espaçamento para o menu não cobrir */
+    margin-bottom: 60px;
 }
 
 /* Estilos do menu */
 .navbar {
-    background-color: rgba(48, 28, 141, 0.9); /* Fundo com leve transparência */
+    background-color: rgba(48, 28, 141, 0.9);
     color: white;
     position: fixed;
-    top: 0;
+    top: 35px; /* Ajusta o espaço superior */
     width: 100%;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 10px; /* Espaçamento reduzido */
-    box-shadow: 0 4px 10px rgba(29, 28, 85, 0.2); /* Sombra branca leve */
+    padding: 5px 10px;
+    box-shadow: 0 4px 10px rgba(29, 28, 85, 0.2);
     transition: background-color 0.3s ease;
 }
 
 .navbar a {
     color: white;
     text-decoration: none;
-    padding: 5px 8px; /* Diminuído em 50% */
+    padding: 5px 8px;
     transition: background-color 0.3s ease, color 0.3s ease;
     font-size: 16px;
-    font-weight: bold; /* Adicionando negrito */
-    margin: 0 70px; /* Diminuído em 50% */
+    font-weight: bold;
+    margin: 0 30px; /* Diminuído para dispositivos menores */
 }
-
 
 .navbar a:hover {
     background-color: #35339b;
@@ -53,7 +52,7 @@ body {
 }
 
 .logo {
-    height: 45px; /* Tamanho menor */
+    height: 45px;
     width: 45px;
     border-radius: 50%;
     margin-right: 10px;
@@ -74,7 +73,7 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgba(52, 31, 150, 0.95); /* Fundo com leve transparência */
+    background-color: rgba(52, 31, 150, 0.95);
     border: 1px solid white;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
@@ -88,7 +87,7 @@ body {
     padding: 10px 15px;
     text-decoration: none;
     display: block;
-    font-size: 14px; /* Reduzido para caber melhor */
+    font-size: 14px;
     transition: background-color 0.3s ease;
 }
 
@@ -172,7 +171,49 @@ body {
     .navbar .logo {
         display: block;
     }
+
+    .navbar .menu-icon {
+        color: white;
+        padding: 10px;
+    }
 }
+
+/* Ajustes para telas menores */
+@media screen and (max-width: 768px) {
+    .sidenav {
+        width: 250px; /* Define largura do menu lateral */
+    }
+
+    .sidenav a {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .navbar a {
+        margin: 0;
+    }
+
+    .dropdown-content a {
+        font-size: 12px; /* Menor para caber em dispositivos pequenos */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar a {
+        font-size: 14px;
+    }
+
+    .sidenav a {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .navbar .logo {
+        height: 35px;
+        width: 35px;
+    }
+}
+
 
 
 
@@ -181,13 +222,13 @@ body {
     max-width: 100%;
     margin: auto;
     overflow: hidden;
-    width: 1280px;
-    height: 420px;
+    width: 100%; /* Tornar responsivo */
+    height: auto; /* Ajustar a altura para ser dinâmica */
 }
 
 .carousel img {
     width: 100%;
-    height: 100%;
+    height: auto; /* Altura automática para manter a proporção */
     display: none;
 }
 
@@ -195,6 +236,14 @@ body {
     display: block;
 }
 
+.carousel-inner img {
+    width: 90%;
+    border-radius: 15px;
+    filter: drop-shadow(10px 7px 10px rgb(44, 25, 128));
+    margin: 0 auto;
+}
+
+/* Estilo para exibição flexível de serviços */
 .services {
     display: flex;
     flex-wrap: wrap;
@@ -225,18 +274,19 @@ body {
     border-radius: 5px;
 }
 
+/* Seção About */
 .about {
     background-color: #f9f9f9;
     padding: 40px 20px;
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Flex em coluna para mobile */
     align-items: center;
-    text-align: left;
+    text-align: center; /* Centralizar texto no mobile */
 }
 
 .about-text {
     max-width: 600px;
-    margin-right: 20px;
+    margin: 20px 0;
 }
 
 .about-text h2 {
@@ -264,25 +314,20 @@ body {
     background-color: #35339b;
 }
 
-.about-images img {
-    width: 100px;
-    height: auto;
-    margin: 5px;
-}
-
+/* Seção Quote */
 .quote {
     background-color: #000;
     color: #fff;
     padding: 40px 20px;
     display: flex;
+    flex-direction: column; /* Coluna para responsividade */
     align-items: center;
-    justify-content: center;
-    text-align: left;
+    text-align: center;
 }
 
 .quote-text {
     max-width: 600px;
-    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .quote-text h2 {
@@ -312,10 +357,38 @@ body {
 }
 
 .quote-image img {
-    width: 300px;
+    width: 100%; /* Ajuste para telas menores */
     height: auto;
     border-radius: 15px;
 }
+
+/* Media queries para telas menores */
+@media (max-width: 768px) {
+    .carousel {
+        width: 100%;
+        height: auto; /* Altura ajustável */
+    }
+
+    .service-item {
+        width: 100%; /* Ajuste para exibir um item por linha no mobile */
+        margin-bottom: 20px;
+    }
+
+    .about, .quote {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text, .quote-text {
+        margin: 0 auto; /* Centralizar texto no mobile */
+    }
+
+    .quote-image img {
+        width: 100%;
+        max-width: 300px; /* Limitar tamanho da imagem no mobile */
+    }
+}
+
 
 .service-types {
     background-color: #f9f9f9;
@@ -341,7 +414,7 @@ body {
 }
 
 .service-type-item {
-    width: 20%;
+    width: 20%; /* Lado a lado em telas grandes */
     box-sizing: border-box;
     margin: 10px;
     text-align: center;
@@ -363,55 +436,30 @@ body {
 
 /* Responsividade para telas menores que 768px */
 @media (max-width: 768px) {
-    .service-item, 
     .service-type-item {
-        width: 48%; /* Ajuste para manter mais espaçamento e evitar quebra desnecessária */
-        margin-bottom: 20px; /* Adiciona espaço entre os itens para uma melhor organização */
+        width: 45%; /* Dois itens por linha em tablets */
+        margin-bottom: 20px;
     }
-    
-    .about,
-    .quote {
-        flex-direction: column; /* Os itens serão empilhados verticalmente */
-        align-items: center; /* Centraliza os itens */
-        text-align: center; /* Centraliza o texto para uma aparência mais organizada */
-        padding: 10px 20px; /* Adiciona um espaçamento interno para evitar que os itens toquem as bordas */
+
+    .container {
+        flex-direction: column; /* Empilhar os cartões na vertical em telas menores */
+        padding: 10px;
     }
-    
-    .about-text,
-    .quote-text {
-        margin-right: 0; /* Remove qualquer margem lateral */
-        margin-bottom: 15px; /* Adiciona espaçamento entre o texto e outros elementos */
-        width: 100%; /* Garante que o texto ocupe toda a largura disponível */
+
+    .card {
+        width: 80%; /* Tornar os cartões mais largos em tablets */
+        margin-bottom: 20px;
     }
 }
 
-/* Responsividade para telas menores que 480px */
-@media (max-width: 480px) {
-    .service-item, 
-    .service-type-item {
-        width: 100%; /* Ocupa a largura total em dispositivos muito pequenos */
-        margin-bottom: 15px; /* Reduz o espaçamento entre os itens */
-    }
-    
-    .about,
-    .quote {
-        padding: 8px 15px; /* Ajusta o padding para telas menores */
-    }
-    
-    .about-text,
-    .quote-text {
-        font-size: 16px; /* Ajusta o tamanho da fonte para melhor legibilidade */
-    }
-}
-
-
-/* Missão, visão e valores */
+/* Estilos gerais */
 .container {
     display: flex;
     justify-content: space-around;
     padding: 20px;
     max-width: 1200px;
     margin: auto;
+    flex-wrap: wrap; /* Garante que os itens possam se ajustar quando a tela for menor */
 }
 
 .card {
@@ -419,23 +467,65 @@ body {
     border: 1px solid #d3d3d3;
     border-radius: 10px;
     padding: 20px;
-    width: 30%;
+    width: 30%; /* Lado a lado no computador (3 por linha) */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
-}
-
-.card h3 {
-    margin: 10px 0;
+    margin-bottom: 20px;
 }
 
 .icon {
     font-size: 40px;
-    color: #3f28a3; /* Cor marrom */
+    color: #3f28a3;
 }
 
 .icon-card {
     box-shadow: 10px 7px 20px rgb(47, 41, 133);
 }
+
+/* Responsividade para telas menores que 768px */
+@media (max-width: 768px) {
+    .card {
+        width: 45%; /* Dois cartões por linha em tablets */
+        margin-bottom: 20px;
+    }
+
+    .container {
+        padding: 10px;
+        flex-direction: row; /* Mantém itens lado a lado até 768px */
+    }
+}
+
+/* Responsividade para telas menores que 480px */
+@media (max-width: 480px) {
+    .service-type-item {
+        width: 100%; /* Um item por linha em dispositivos móveis */
+        margin-bottom: 15px;
+    }
+
+    .container {
+        flex-direction: column; /* Empilha os itens na vertical em telas muito pequenas */
+        padding: 8px;
+    }
+
+    .card {
+        width: 100%; /* Cartões ocupam 100% da largura em dispositivos móveis */
+        margin-bottom: 15px;
+    }
+
+    .service-types h2 {
+        font-size: 20px; /* Ajustar tamanho da fonte para telas menores */
+    }
+
+    .service-types p {
+        font-size: 16px;
+    }
+
+    .card h3 {
+        font-size: 18px; /* Ajustar o tamanho da fonte dos títulos dos cartões */
+    }
+}
+
+
 
 /* Footer e chatbot com contato */
 
@@ -596,7 +686,7 @@ body {
 }
 
 footer {
-    background-color: #3e48aa;
+    background-color: #252b5e;
     color: white;
     padding: 10px 0;
     text-align: center;
