@@ -239,7 +239,7 @@ body {
 .carousel-inner img {
     width: 90%;
     border-radius: 15px;
-    filter: drop-shadow(10px 7px 10px rgb(44, 25, 128));
+    /* filter: drop-shadow(10px 7px 10px rgb(44, 25, 128)); */
     margin: 0 auto;
 }
 
@@ -583,6 +583,77 @@ body {
     font-size: 12px;
     border-radius: 5px;
 }
+
+/* Começo depoimentos */
+.testimonial-section {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+}
+.testimonial-card {
+    border: none;
+    text-align: center; /* Centraliza o texto */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(62, 72, 151, 0.1);
+    height: 100%; /* Faz com que todas as caixas tenham a mesma altura */
+}
+.testimonial-image {
+    width: 100%;
+    border-radius: 15px;
+    max-height: 250px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+.quote {
+    font-style: italic;
+    margin: 20px 0;
+}
+.author {
+    font-weight: bold;
+}
+.testimonial-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Estilo para garantir que a seção seja responsiva */
+@media (max-width: 767px) {
+    .testimonial-card {
+        margin-bottom: 20px;
+    }
+}
+/* Final depoimentos */
+
+/* Icone redes sociais */
+.social-icons {
+    position: fixed; /* Fixa os ícones na tela */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta o centro vertical */
+    left: 20px; /* Espaçamento da lateral esquerda */
+    z-index: 1000; /* Garante que os ícones fiquem acima de outros elementos */
+}
+
+.social-icon {
+    display: block;
+    margin: 10px 0; /* Espaçamento entre os ícones */
+}
+
+.social-icon img {
+    transition: transform 0.3s; /* Animação ao passar o mouse */
+}
+
+.social-icon:hover img {
+    transform: scale(1.1); /* Aumenta o ícone ao passar o mouse */
+}
+
+/* Para o Instagram ou qualquer ícone específico */
+.instagram {
+    margin-left: 0; /* Remove qualquer ajuste específico */
+}
+
+
+/* botoes flutuantes */
 .floating-buttons {
     position: fixed;
     bottom: 20px;
@@ -606,7 +677,7 @@ body {
     box-shadow: 0 4px 8px rgba(14, 16, 32, 0.2);
 }
 .floating-button.chatbot {
-    background-color: #FF4500;
+    background-color: #231d62;
 }
 
  /* Estilo do menu flutuante */
